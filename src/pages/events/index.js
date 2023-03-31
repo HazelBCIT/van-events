@@ -56,7 +56,7 @@ function AllEventsPage() {
       <h1>All events</h1>
       </div>
       
-      {events && <EventList events={events} />}
+      {events.length !==0 && <EventList events={events} />}
       <Footer />
     </div>
 
