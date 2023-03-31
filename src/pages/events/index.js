@@ -16,6 +16,7 @@ function AllEventsPage() {
         if(data.length !== 0) {
           setEvents(data)
           setIfEventIsNull(false)
+          console.log(events);
         }
         });
   }, [events]);
