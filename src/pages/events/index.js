@@ -7,11 +7,17 @@ import Footer from "../../../components/footer";
 
 function AllEventsPage() {
   const [events, setEvents] = useState([]);
+  const [ifEventIsNull,setIfEventIsNull] = useState(true)
 
   useEffect(() => {
     fetch("/api/get-events")
       .then((response) => response.json())
-      .then((data) => setEvents(data));
+      .then((data) => {
+        if(data.length !== 0) {
+          setEvents(data)
+          setIfEventIsNull(false)
+        }
+        });
   }, [events]);
 
 
@@ -55,8 +61,8 @@ function AllEventsPage() {
       <div className={styles.all_events_title}>
       <h1>All events</h1>
       </div>
-      
-      {events.length !==0 && <EventList events={events} />}
+      {ifEventIsNull && <p>No event yet!</p>}
+      {!ifEventIsNull && <EventList events={events} />}
       <Footer />
     </div>
 
