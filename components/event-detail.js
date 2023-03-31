@@ -5,7 +5,7 @@ function EventDetail(props) {
 
   return (
     <>
-      <Image src="/event-samle.jpg" alt={title} width={250} height={160} />
+      {/* <Image src="/event-samle.jpg" alt={title} width={250} height={160} /> */}
       {/* <h2>
         Event Name:
         {title}
