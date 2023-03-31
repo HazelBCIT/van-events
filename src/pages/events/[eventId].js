@@ -7,13 +7,13 @@ function EventDetailPage(props) {
 
   return (
     <>
-      <EventDetail
+      {/* <EventDetail
         key={selectedEvent}
         title={selectedEvent.title}
         address={selectedEvent.address}
         content={selectedEvent.content}
         date={selectedEvent.date}
-      />
+      /> */}
       <Comments eventId={selectedEvent.id} />
     </>
   );
