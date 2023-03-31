@@ -5,7 +5,7 @@ function EventList(props) {
   
   return (
     <div style={{width:"100%", marginBottom:80}}>
-      {events.map((event) => (
+      {events?.map((event) => (
         <EventItem
           key={event.id}
           id={event.id}
