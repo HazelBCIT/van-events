@@ -8,11 +8,11 @@ function EventDetail(props) {
       <Image src="/event-samle.jpg" alt={title} width={250} height={160} />
       <h2>
         Event Name:
-        {title}
+        {title ? title: null}
       </h2>
-      <time>Date: {date}</time>
-      <address>Address: {address}</address>
-      <p>Content: {content}</p>
+      <time>Date: {date ? date:null}</time>
+      <address>Address: {address ? address:null}</address>
+      <p>Content: {content? content:null}</p>
     </>
   );
 }
