@@ -1,0 +1,268 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  min-height: 100vh;
+  color: #111;
+  font-family: 'Raleway';
+}
+.navbar_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 5vh 50px 5px 50px;
+}
+
+.navbar_menubtn {
+  margin: 0 10px;
+  font-size: 16px;
+  position: relative;
+}
+.navbar_menubtn:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #111;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar_menubtn:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.landing_container {
+  background-image: url("/bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.landing_logo {
+  width: 45vw;
+  position: relative;
+  z-index: 5;
+}
+
+.landing_logo h2 {
+	color: #fff;
+  font-family: 'Raleway';
+	font-size: 10em;
+	position: absolute;
+  top:20vh;
+  left:-4vw;
+  letter-spacing: -5px;
+}
+
+.landing_logo h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 1px #111;
+}
+
+.landing_logo h2:nth-child(2) {
+	color: #111;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+
+.signin_btn {
+  font-family: "raleway";
+  color: #111;
+  font-size: 16px;
+  border: none;
+  background: none;
+  position: relative;
+}
+
+.signin_btn:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #111;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.signin_btn:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar_container_left {
+display: flex;
+}
+
+.fancy_sphere {
+  width: 35vw;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 60px;
+  animation: bounce 2s ease-in infinite alternate;
+}
+
+
+@keyframes bounce {
+	0% {
+		transform: translateY(-16rem)
+	}
+	6%{
+		transform: translateY(-16rem)
+	}
+	98% {
+		transform: translateY(0)
+	}
+	100% {
+		transform: translateY(0) scale(1, 0.85)
+	}
+}
+
+.regular_btn {
+  z-index: 2;
+  background: none;
+  border: #fff solid 1px;
+  border-radius: 15px;
+  font-family: 'Raleway';
+  color: #fff;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 10px 25px;
+  transition: 1s ease-in-out;
+}
+
+.expolre_btn {
+  position: absolute;
+  bottom: 18rem;
+  z-index: 99;
+}
+
+.glow_on_hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.glow_on_hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow_on_hover:active {
+  color: #000
+}
+
+.glow_on_hover:active:after {
+  background: transparent;
+}
+
+.glow_on_hover:hover:before {
+  opacity: 1;
+}
+
+.glow_on_hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.events_container {
+  background-color:#fff;
+}
+
+.allEvents_container {
+  width: 100%;
+  align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px 0;
+}
+
+.allEvents_time {
+  width:20%;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+
+.allEvents_box {
+  display: flex;
+  flex-direction: column;
+  width:50%
+}
