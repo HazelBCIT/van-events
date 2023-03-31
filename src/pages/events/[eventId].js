@@ -14,7 +14,7 @@ function EventDetailPage(props) {
         content={selectedEvent.content}
         date={selectedEvent.date}
       /> */}
-      <Comments eventId={selectedEvent.id} />
+      {/* <Comments eventId={selectedEvent.id} /> */}
     </>
   );
 }
