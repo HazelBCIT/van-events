@@ -45,7 +45,7 @@ export default function Carousel() {
             key={index}
             className={index === activeIndex ? styles.active : styles.inactive}
           >
-          <Image className={styles.carousel_Img} src={img.img_src} alt=""/>
+          <Image className={styles.carousel_Img} src={img.img_src} alt="" width={1000} height={300}/>
           </div>        
         ))}
       </div>
