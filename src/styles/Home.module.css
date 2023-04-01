@@ -17,6 +17,10 @@
   width: 100vw;
   padding: 5vh 50px 5px 50px;
 }
+.btn_cont {
+  width: 50px;
+  margin: 0 5px 0 25px;
+}
 
 
 .navbar_menubtn {

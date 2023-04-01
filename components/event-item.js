@@ -59,12 +59,17 @@ function EventItem(props) {
       <Link className={`${styles.regular_btn} ${styles.glow_on_hover}`} style={{width:175}}href={exploreLink}>
         <span>Explore More</span>
       </Link>
+      <div className={styles.btn_cont}>
       <Button onClick={deleteEvent}>
-        <span>Delete Event</span>
+        <span>Delete</span>
       </Button>
-      <Button onClick={showUpdateForm}>
-        <span>Update Event</span>
-      </Button> 
+      </div>
+      <div className={styles.btn_cont}>
+        <Button onClick={showUpdateForm}>
+          <span>Update</span>
+        </Button>
+      </div>
+       
       {updateForm && <UpdateEventForm onAddEvent={updateEventHandler}/>}
       {responseMessage && <strong>{responseMessage}</strong>}
     </div>
