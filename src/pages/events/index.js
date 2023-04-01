@@ -64,7 +64,7 @@ function AllEventsPage() {
       <hr />
       <div className={styles.all_events_title}>
       <h1>All events</h1>
-      <AddEvent_Popup />
+      {/* <AddEvent_Popup /> */}
       </div>
       {ifEventIsNull && <p>No event yet!</p>}
       {!ifEventIsNull && <EventList events={events} />}
