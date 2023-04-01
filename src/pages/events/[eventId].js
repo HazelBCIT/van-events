@@ -6,7 +6,11 @@ import Footer from "../../../components/footer";
 import Layout from "../../../components/layout";
 
 function EventDetailPage(props) {
-  const selectedEvent = props.selectedEvent;
+
+  const selectedEvents = [{id: 1, createdAt: '22023-03-31 15:23:19', title: 'NBA', address: 'BC Place Stadium', content: 'BC Place Stadium', date: '2023/6/17'},{id: 3, createdAt: '2023-03-31 15:25:03', title: 'Coding Lecture', address: 'BCIT', content: 'hahahha', date:'2023/6/17'},{id: 4, createdAt: '2023-03-31 16:10:41', title: 'Party Tonight', address: 'UBC', content: "Let's party", date:'2023/3/3'},{id: 3, createdAt: '2023-03-31 15:25:03', title: 'Coding Lecture', address: 'BCIT', content: 'hahahha', date:'2023/6/17'},{id: 5, createdAt: '2023-03-31 16:10:41', title: 'Parents meeting', address: '9330 Univercity Cres', content: "Lol!", date:'2023/9/30'}]
+  const randomNumber = Math.floor(Math.random() * 5);
+  const selectedEvent = selectedEvents[randomNumber];
+  // const selectedEvent = props.selectedEvent;
 
   return (
     <>
