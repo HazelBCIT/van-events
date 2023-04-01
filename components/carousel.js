@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import styles from "../src/styles/Events.module.css";
+import Image from "next/image";
 
 const CarouselData = [
   {
@@ -44,7 +45,7 @@ export default function Carousel() {
             key={index}
             className={index === activeIndex ? styles.active : styles.inactive}
           >
-          <img className={styles.carousel_Img} src={img.img_src} alt=""/>
+          <Image className={styles.carousel_Img} src={img.img_src} alt=""/>
           </div>        
         ))}
       </div>
