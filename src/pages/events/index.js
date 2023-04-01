@@ -29,8 +29,8 @@ function AllEventsPage() {
     <div className={styles.main}>
       <Layout />
       <img className={styles.navBar_logo} src="/VanE_Logo@2x.png" alt="Nav Bar Logo" />
-      {/* <img className={styles.banner_img} src="/carousel_image02.png" alt="Banner Image" /> */}
-      <Carousel />
+      <img className={styles.banner_img} src="/carousel_image02.png" alt="Banner Image" />
+      {/* <Carousel /> */}
 
       <hr />
       <h1>Trending events</h1>
