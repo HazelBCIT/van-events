@@ -1,6 +1,8 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "./api/auth/[...nextauth]";
+import styles from '../styles/Comps.module.css'
+import Layout from "../../components/layout";
 
 
 export default function Component() {
@@ -9,10 +11,14 @@ export default function Component() {
   if (session) {
     return (
       <>
-      <img src={session.user.image} /><br />
-        Email:  {session.user.email} <br />
-        Username: {session.user.name} <br />
-        <button onClick={() => signOut()}>Sign out</button>
+      <div className={styles.profilePage_container}>
+        <Layout />
+        <img className={styles.profilePage_img} src={session.user.image} /><br />
+        Email:  {session.user.email} <br /> <br />
+        Username: {session.user.name} <br /> <br />
+        <button className={styles.regular_btn} onClick={() => signOut()}>Sign out</button>
+      </div>
+     
       </>
     );
   }

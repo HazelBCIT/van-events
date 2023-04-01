@@ -1,6 +1,8 @@
 import Head from "next/head";
 import NewEventForm from "../../components/new-event-form";
+import styles from '../styles/Comps.module.css'
 import { useState } from "react";
+import Link from "next/link";
 
 function AddEvent() {
   const [responseMessage, setResponseMessage] = useState()
@@ -19,10 +21,21 @@ function AddEvent() {
   return (
     <>
       <Head>
-        <title>Mega Events</title>
+        <title>VanEvents</title>
       </Head>
-      <NewEventForm onAddEvent={addEventHandler} />
-      {responseMessage && <strong>{responseMessage}</strong>}
+
+
+      <div className={styles.addevent_popup_blur}>
+        
+        <div className={styles.addevent_popup_container}>
+          <NewEventForm onAddEvent={addEventHandler} />
+          {responseMessage && <strong>{responseMessage}</strong>}
+          <Link href="/events">
+          <button className={styles.regular_btn} style={{alignSelf:"center"}}>Back</button>
+          </Link>
+        </div>
+    </div>
+
     </>
   );
 }

@@ -1,6 +1,7 @@
 import NewEventForm from "../components/new-event-form";
 import { useState } from "react";
 import styles from '../src/styles/Comps.module.css'
+import Link from "next/link";
 
 
 function AddEvent_Popup() {
@@ -21,16 +22,19 @@ function AddEvent_Popup() {
 
   return (
     <>
-    <button className={styles.add_new_button} onClick={() => setShowPopup(true)}> 
-      <div className={styles.add_new_button_icon}>
-          <img src="/+icon.png" />
+    <Link href="/addEvent">
+      <button className={styles.add_new_button} > 
+        <div className={styles.add_new_button_icon}>
+            <img src="/+icon.png" />
+          </div>
+          <div className={styles.add_new_button_label}>
+            Add
         </div>
-        <div className={styles.add_new_button_label}>
-          Add
-      </div>
-    </button>
+      </button>
+    </Link>
+    
 
-    {showPopup ? (
+    {/* {showPopup ? (
       <div className={styles.addevent_popup_blur}>
         <div className={styles.addevent_popup_container}>
           <NewEventForm onAddEvent={addEventHandler} />
@@ -39,7 +43,7 @@ function AddEvent_Popup() {
         </div>
     </div>
   
-) : null}
+) : null} */}
     </>
   );
 }

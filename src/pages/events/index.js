@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Layout from "../../../components/layout";
 import styles from '../../styles/Events.module.css';
 import Footer from "../../../components/footer";
+import AddEvent_Popup from "../../../components/addEvent_popup";
 
 
 function AllEventsPage() {
@@ -61,6 +62,7 @@ function AllEventsPage() {
       <hr />
       <div className={styles.all_events_title}>
       <h1>All events</h1>
+      <AddEvent_Popup />
       </div>
       {ifEventIsNull && <p>No event yet!</p>}
       {!ifEventIsNull && <EventList events={events} />}
