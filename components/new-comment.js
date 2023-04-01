@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import styles from '../src/styles/Comps.module.css';
 
 function NewComment(props) {
   const commentInputRef = useRef();
@@ -14,11 +15,11 @@ function NewComment(props) {
   }
 
   return (
-    <form onSubmit={sendCommentHandler}>
-      <label htmlFor="comment">Your comment</label>
-      <textarea id="comment" rows="5" ref={commentInputRef}></textarea>
+    <form className={styles.newComment_cont} onSubmit={sendCommentHandler}>
+      {/* <label htmlFor="comment">Your comment</label> */}
+      <textarea placeholder="Leave your comment here" id="comment" rows="5" ref={commentInputRef}></textarea>
 
-      <button>Submit</button>
+      <button className={styles.regular_btn} style={{alignSelf:"flex-end"}}>Submit</button>
     </form>
   );
 }

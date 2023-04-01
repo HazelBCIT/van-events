@@ -1,20 +1,30 @@
 import { prisma } from "../../../server/db/client";
 import EventDetail from "../../../components/event-detail";
 import Comments from "../../../components/comments";
+import styles from '../../styles/Events.module.css';
+import Footer from "../../../components/footer";
+import Layout from "../../../components/layout";
 
 function EventDetailPage(props) {
   const selectedEvent = props.selectedEvent;
 
   return (
     <>
-      {/* <EventDetail
-        key={selectedEvent}
-        title={selectedEvent.title}
-        address={selectedEvent.address}
-        content={selectedEvent.content}
-        date={selectedEvent.date}
-      />
-      <Comments eventId={selectedEvent.id} /> */}
+    <div className={styles.detail_container}>
+      <Layout />
+      <img className={styles.navBar_logo} src="/VanE_Logo@2x.png" alt="Nav Bar Logo" />
+        <EventDetail
+          key={selectedEvent}
+          title={selectedEvent.title}
+          address={selectedEvent.address}
+          content={selectedEvent.content}
+          date={selectedEvent.date}
+        />
+      <hr />
+      <Comments eventId={selectedEvent.id} />
+      <div className={styles.spacer} ></div>
+      <Footer />
+    </div>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import CommentList from "./comment-list";
 import { useEffect, useState } from "react";
 import NewComment from "./new-comment";
+import styles from '../src/styles/Comps.module.css'
 
 function Comments(props) {
   const { eventId } = props;
@@ -56,14 +57,14 @@ function Comments(props) {
   }
 
   return (
-    <section>
-      <button onClick={toggleCommentsHandler}>
-        {showComments ? "Hide" : "Show"} Comments
+    <section className={styles.comment_container}>
+      <button className={styles.comment_btn} style={{width:180}} onClick={toggleCommentsHandler}>
+        {showComments ? "Hide" : "View"} Comments
       </button>
       {showComments && <NewComment onAddComment={addCommentHandler} />}
       {responseMessage && <strong>{responseMessage}</strong>}
       {showComments && !isFetchingCommets && <CommentList items={comments} />}
-      {showComments && isFetchingCommets && <p>No comment yet</p>}
+      {showComments && isFetchingCommets && <p>Loading ...</p>}
     </section>
   );
 }

@@ -10,10 +10,14 @@
 }
 .navbar_container {
   display: flex;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
   justify-content: space-between;
   width: 100vw;
   padding: 5vh 50px 5px 50px;
 }
+
 
 .navbar_menubtn {
   margin: 0 10px;
@@ -26,9 +30,9 @@
   width: 100%;
   transform: scaleX(0);
   height: 1px;
-  bottom: 0;
+  bottom: 25px;
   left: 0;
-  background-color: #111;
+  background-color: #000000;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

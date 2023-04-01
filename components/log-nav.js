@@ -24,13 +24,13 @@ function LogNav(props) {
               <img className={styles.profile_triangle} onClick={toggleMenu} src="/Triangle.png" alt=""/>
             </div>
             <ul className={isOpen ? styles.show:null}>
-              <li style={{paddingBottom:0}}><div>Signed in as</div></li>
+              <li style={{paddingBottom:0,}}><div>Signed in as</div></li>
               <li style={{fontWeight:400, paddingTop:0}}><div>{user?.name}</div></li>
               <hr />
-              <li><Link href="/profile">Your Profile</Link></li>
-              <li><Link href="/addEvent">Add Event</Link></li>
+              <li className={styles.profile_button}><Link href="/profile">Your Profile</Link></li>
+              <li className={styles.profile_button}><Link href="/addEvent">Add Event</Link></li>
               <hr />
-              <li><Button onClick={onSignOut}>Sign Out</Button></li>
+              <li className={styles.profile_button}><Button onClick={onSignOut}>Sign Out</Button></li>
             </ul>
           </>
         )}

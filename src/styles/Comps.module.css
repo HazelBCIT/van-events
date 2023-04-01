@@ -270,6 +270,98 @@
   box-shadow: -8px -8px 24px 0 #ffffff
   8px 8px 24px 0 #AEAEC0 40%;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
 }
 
+.profile_button:hover {
+background-color: #e2e2e2;
+}
+
+.newComment_cont {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  font-family: 'raleway';
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.newComment_cont textarea {
+  font-family: 'raleway';
+  padding: 5px 5px;
+  font-size: 18px;
+  border: 0.75px solid #9f9f9f;
+  border-radius: 5px;
+}
+
+.newComment_cont textarea::placeholder {
+  font-family: 'raleway';
+  font-size: 18px;
+  padding: 5px 5px;
+}
+.comment_btn {
+  border: none;
+  background: none;
+  font-family: 'raleway';
+  font-size: 18px;
+  font-weight: 300;
+  align-self: flex-end;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.comment_container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.commentList_cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.commentList_cont li{
+list-style: none;
+display: flex;
+margin: 5px 0;
+}
+
+.commentList_cont img{
+  width:60px;
+  height: 60px;
+  border-radius: 60px;
+}
+
+.profile_container hr {
+  border-top: 0.75px solid #9f9f9f;
+  margin: 0px 0 10px 0;
+  width: 100%;
+}
+
+.commentList_inner{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  border-radius: 15px;
+  margin-left: 15px;
+  padding: 10px;
+  }
+
+  .commentList_username {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .commentList_email {
+    color: #717171;
+  }
+
+  .commentList_content{
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 15px;
+
+  }
+  

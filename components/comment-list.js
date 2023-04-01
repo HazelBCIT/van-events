@@ -1,15 +1,17 @@
+import styles from '../src/styles/Comps.module.css'
+
 function CommentList(props) {
   const { items } = props;
 
   return (
-    <ul>
+    <ul className={styles.commentList_cont}>
       {items.map((item) => (
         <li key={item.id}>
           <img src={item.user.image} />
-          <p>Comment by {item.user.name}</p>
-          <p>{item.content}</p>
-          <div>
-            By <p>{item.email}</p>
+          <div className={styles.commentList_inner}>
+            <div className={styles.commentList_username}>{item.user.name}</div>
+            <div className={styles.commentList_email}>{item.email}</div>
+            <div className={styles.commentList_content}>{item.content}</div>
           </div>
         </li>
       ))}

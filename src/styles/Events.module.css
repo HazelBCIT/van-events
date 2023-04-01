@@ -61,6 +61,18 @@
   width: 100%;
 }
 
+.detail_container hr {
+  border-top: 0.75px solid #9f9f9f;
+  margin: 0px 0 20px 0;
+  width: 60%;
+}
+
+.spacer {
+width: 100%;
+height: 300px;
+}
+
+
 .all_events_title {
   display:flex;
   flex-direction: row;
