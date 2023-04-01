@@ -180,6 +180,7 @@ display: flex;
 .expolre_btn {
   position: absolute;
   bottom: 18rem;
+  z-index: 99;
 }
 
 .glow_on_hover {

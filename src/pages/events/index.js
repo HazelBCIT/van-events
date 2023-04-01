@@ -4,6 +4,7 @@ import Layout from "../../../components/layout";
 import styles from '../../styles/Events.module.css';
 import Footer from "../../../components/footer";
 import AddEvent_Popup from "../../../components/addEvent_popup";
+import Carousel from "../../../components/carousel";
 
 
 function AllEventsPage() {
@@ -28,7 +29,8 @@ function AllEventsPage() {
     <div className={styles.main}>
       <Layout />
       <img className={styles.navBar_logo} src="/VanE_Logo@2x.png" alt="Nav Bar Logo" />
-      <img className={styles.banner_img} src="/carousel_image02.png" alt="Banner Image" />
+      {/* <img className={styles.banner_img} src="/carousel_image02.png" alt="Banner Image" /> */}
+      <Carousel />
 
       <hr />
       <h1>Trending events</h1>
@@ -38,24 +40,24 @@ function AllEventsPage() {
 
         <div className={styles.trending_box}>
           <img className={styles.trending_img} src="/Trending-1.jpeg" alt="Banner Image" />
-          <h2>title</h2>
-          <time>Date:</time>
-          <address>Address: </address>
+          <h2>Beyoncé: Renaissance World Tour</h2>
+          <time>September 11 · 7:00pm</time>
+          <p style={{color:"#9a9a9a"}}>BC Place Stadium </p>
         </div>
 
 
         <div className={styles.trending_box}>
           <img className={styles.trending_img} src="/Trending-2.jpeg" alt="Banner Image" />
-          <h2>title</h2>
-          <time>Date:</time>
-          <address>Address: </address>
+          <h2>Ed Sheeran: +-=÷x Tour</h2>
+          <time>September 02 · 6:00pm</time>
+          <p style={{color:"#9a9a9a"}}>BC Place Stadium </p>
         </div>
 
         <div className={styles.trending_box}>
           <img className={styles.trending_img} src="/Trending-3.jpeg" alt="Banner Image" />
-          <h2>title</h2>
-          <time>Date:</time>
-          <address>Address: </address>
+          <h2>Drake: It's All A Blur Tour</h2>
+          <time>August 28 · 7:00pm</time>
+          <p style={{color:"#9a9a9a"}}>Rogers Arena</p>
         </div>
       </div>
 

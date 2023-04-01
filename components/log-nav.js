@@ -26,10 +26,10 @@ function LogNav(props) {
             <ul className={isOpen ? styles.show:null}>
               <li style={{paddingBottom:0,}}><div>Signed in as</div></li>
               <li style={{fontWeight:400, paddingTop:0}}><div>{user?.name}</div></li>
-              <hr />
+              <div className={styles.profile_divider} ></div>
               <li className={styles.profile_button}><Link href="/profile">Your Profile</Link></li>
               <li className={styles.profile_button}><Link href="/addEvent">Add Event</Link></li>
-              <hr />
+              <div className={styles.profile_divider} ></div>
               <li className={styles.profile_button}><Button onClick={onSignOut}>Sign Out</Button></li>
             </ul>
           </>
